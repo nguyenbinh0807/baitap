@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>đọc chữ số nguyên x</h1>
+	<div class="result">
+
+	</div>
+</body>
+<script>
+    //chữ số ở hàng nghìn       
+    function nghin(x, result) {
+	    switch(x/1000) {
+		    case 1:
+			    result.innerHTML = 'một nghìn';
+			    break;
+		   case 2:
+			   result.innerHTML = 'hai nghìn';
+			   break;
+			 case 3:
+			   result.innerHTML = 'ba nghìn';
+			   break;
+			    case 4:
+			   result.innerHTML = 'bốn nghìn';
+			   break;
+			    case 5:
+			   result.innerHTML = 'năm nghìn';
+			   break;
+			    case 6:
+			   result.innerHTML = 'sáu nghìn';
+			   break;
+			    case 7:
+			   result.innerHTML = 'bảy nghìn';
+			   break;
+			    case 8:
+			   result.innerHTML = 'tám nghìn';
+			   break;
+			    case 9:
+			   result.innerHTML = 'chín nghìn';
+			   break;   	    
+	    }
+    }
+     //chữ số ở hàng trăm
+     function tram(x, result) {
+	      switch((x/100)%10) {
+	         case 1:
+	         result.innerHTML = 'một trăm';
+		break;
+		case 2:
+		result.innerHTML = 'hai trăm';
+		 break;
+		case 3:
+		 result.innerHTML = 'ba trăm';
+		break;
+		case 4:
+		result.innerHTML = 'bốn trăm';
+		break;
+		case 5:
+		result.innerHTML = 'năm trăm';
+	         break;
+		case 6:
+		result.innerHTML = 'sáu trăm';
+		break;
+		case 7:
+		result.innerHTML = 'bảy trăm';
+	         break;
+		case 8:
+	        result.innerHTML = 'tám trăm';
+		break;
+		case 9:
+		 result.innerHTML = 'chín trăm';
+	        break;   
+	    }
+     }
+     //ở hàng chục
+      function chuc(x, result) {
+	      switch((x/10)%10) {
+		      case 1:
+			      result.innerHTML = 'mười';
+			    break;
+		   case 2:
+			   result.innerHTML = 'hai mươi';
+			   break;
+			 case 3:
+			   result.innerHTML = 'ba mươi';
+			   break;
+			    case 4:
+			   result.innerHTML = 'bốn mươi';
+			   break;
+			    case 5:
+			   result.innerHTML = 'năm mươi';
+			   break;
+			    case 6:
+			   result.innerHTML = 'sáu mươi';
+			   break;
+			    case 7:
+			   result.innerHTML = 'bảy mươi';
+			   break;
+			    case 8:
+			   result.innerHTML = 'tám mươi';
+			   break;
+			    case 9:
+			   result.innerHTML = 'chín mươi';
+			   break;   
+			   case 0:
+			      result.innerHTML = 'linh';
+			      break;
+	    }
+     }
+     //hàng đơn vị
+      function donvi(x, result) {
+	      switch(x%10) {
+		    case 1:
+			    result.innerHTML = 'một';
+			    break;
+		   case 2:
+			   result.innerHTML = 'hai';
+			   break;
+			 case 3:
+			   result.innerHTML = 'ba';
+			   break;
+			    case 4:
+			   result.innerHTML = 'bốn';
+			   break;
+			    case 5:
+			   result.innerHTML = 'năm';
+			   break;
+			    case 6:
+			   result.innerHTML = 'sáu';
+			   break;
+			    case 7:
+			   result.innerHTML = 'bảy';
+			   break;
+			    case 8:
+			   result.innerHTML = 'tám';
+			   break;
+			    case 9:
+			   result.innerHTML = 'chín';
+			   break;    
+	    }
+     }
+	var result = document.querySelector('.result');
+	var x = prompt('nhập số nguyên x');
+	/*var ngh = (x/1000)%10;
+	var tr = (x/100)%10;
+	var ch = (x/10)%10;
+	var don = x%10;*/
+
+	if(x > 9999) {
+		alert('con số không hợp lệ');
+	}
+	else{
+		nghin(x, result);
+		tram(x, result);
+		chuc(x, result);
+		donvi(x, result);
+	}
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>tính căn bậc n của số x</h1>
+	<div class="result">
+            
+	</div>
+</body>
+<script>
+     
+	var result = document.querySelector('.result');
+	var n = prompt('nhập căn bậc n');
+	var x = prompt('nhập cơ số x');
+	if(x > 0 && x % 2 == 0) {
+		var ketqua = Math.pow(x, 1/n);
+		var ketqua2 = ketqua.toFixed(9);
+	       result.innerHTML= `kết quả là: ${ketqua2}`
+	} else{
+		result.innerHTML = 'không có kết quả';
+	}
+</script>
+</html>
