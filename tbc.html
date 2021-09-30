@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>tính trung bình cộng trong mảng n phần tử</h1>
+	<div class="result">
+
+	</div>
+</body>
+<script>
+      //tạo một hàm tính trung bình cộng va nhan các số lẻ
+     function trungbinh(arr, n, tbc, tbn){
+              //trung binh cộng là bằng tổng các số chia cho số lượng;
+	      var dem = 0; //tạo biến đếm là số lượng
+	      var solecong = 0;
+	       var solenhan = 0;                           //tạo biến số le 
+	      var tich = 1;
+	      for(var i = 0; i < n; i++) {
+		      //lấy phần tử ra để tìm số lẻ
+		      if(arr[i] % 2 != 0) {
+                           //pt chia hết cho 2 mà khác 0 là số lẻ
+			     solecong = solecong + arr[i];
+			     solenhan = solenhan * arr[i];
+			     dem++;
+		      }
+	      }
+	      tbc = sochan/dem;
+               tbn = Math.pow(solenhan, 1.0/n);
+	      document.querySelector('.result').innerHTML=`
+	      tổng trung bình cộng là: ${tbc}     
+	      tổng trung bình nhân là: ${tbn}
+	      `
+     }
+
+      //tạo mảng
+      var arr = new Array(100);
+      var n;
+      var tbc; // tạo một biến trung bình cộng
+      var tbn; //tạo một biến trung bình nhân
+       n = 0;
+	      while(n <= 0) {
+		    var n = prompt('nhập n > 0 phần tử trong mảng');
+		    //nhập số lượng phần tử
+	      }
+	      //lúc này n là độ dài phần tử của mảng
+	      for(var i = 0; i < n; i++) {
+		      //vòng lặp này giúp nhập phần tử
+		      var ptarr = arr[i];
+		      ptarr = prompt('nhập các phần tử');
+		}	        
+		trungbinhcong(ptarr, n, tbc, tbn);
+		
+</script>
+</html>
